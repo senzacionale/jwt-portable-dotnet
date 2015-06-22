@@ -2,7 +2,7 @@
 <package>
 	<metadata>
 		<id>Portable.JWT</id>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 		<authors>John Sheehan, Michael Lehenbauer, Mitja Bombac</authors>
 		<description>JWT (JSON Web Token) Portable Implementation for .NET 4.5+ (Public Domain)</description>
 		<language>en-US</language>
