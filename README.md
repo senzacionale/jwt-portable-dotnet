@@ -3,7 +3,7 @@
 This library is Portable copy of https://github.com/jwt-dotnet/jwt and supports generating and decoding [JSON Web Tokens](http://tools.ietf.org/html/draft-jones-json-web-token-10).
 
 ## Installation
-The easiest way to install is via NuGet.  See [here](https://nuget.org/packages/JWT).  Else, you can download and compile it yourself.
+The easiest way to install is via NuGet. See [here](https://www.nuget.org/packages/Portable.JWT/). Else, you can download and compile it yourself.
 
 ## Usage
 ### Creating Tokens
