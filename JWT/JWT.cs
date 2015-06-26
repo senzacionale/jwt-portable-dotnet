@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Org.BouncyCastle.Crypto.Macs;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Parameters;
+using JWT.exceptions;
+using JWT.jws;
 
 namespace JWT
 {
@@ -11,7 +10,7 @@ namespace JWT
     {
         HS256,
         HS384,
-        HS512
+        HS512,
     }
 
     /// <summary>
@@ -32,7 +31,7 @@ namespace JWT
             {
                 { JwtHashAlgorithm.HS256, (key, value) => new HmacSha256(key).ComputeHash(value)},
                 { JwtHashAlgorithm.HS384, (key, value) => new HmacSha384(key).ComputeHash(value)},
-                { JwtHashAlgorithm.HS512, (key, value) => new HmacSha512(key).ComputeHash(value)}
+                { JwtHashAlgorithm.HS512, (key, value) => new HmacSha512(key).ComputeHash(value)},
             };
         }
 
@@ -245,7 +244,7 @@ namespace JWT
                 case "HS256": return JwtHashAlgorithm.HS256;
                 case "HS384": return JwtHashAlgorithm.HS384;
                 case "HS512": return JwtHashAlgorithm.HS512;
-                default: throw new SignatureVerificationException("Algorithm not supported.");
+                default: throw new SignatureVerificationException("Algorithm '" + algorithm + "' is not supported!");
             }
         }
 
@@ -284,80 +283,6 @@ namespace JWT
             }
             var converted = Convert.FromBase64String(output); // Standard base64 decoder
             return converted;
-        }
-    }
-
-    public class HmacSha256
-    {
-        private readonly HMac _hmac;
-
-        public HmacSha256(byte[] key)
-        {
-            _hmac = new HMac(new Sha256Digest());
-            _hmac.Init(new KeyParameter(key));
-        }
-
-        public byte[] ComputeHash(byte[] value)
-        {
-            if (value == null) throw new ArgumentNullException("value");
-
-            byte[] resBuf = new byte[_hmac.GetMacSize()];
-            _hmac.BlockUpdate(value, 0, value.Length);
-            _hmac.DoFinal(resBuf, 0);
-
-            return resBuf;
-        }
-    }
-
-    public class HmacSha384
-    {
-        private readonly HMac _hmac;
-
-		public HmacSha384(byte[] key)
-		{
-            _hmac = new HMac(new Sha384Digest());
-            _hmac.Init(new KeyParameter(key));
-		}
-
-		public byte[] ComputeHash(byte[] value)
-		{
-            if (value == null) throw new ArgumentNullException("value");
-
-            byte[] resBuf = new byte[_hmac.GetMacSize()];
-            _hmac.BlockUpdate(value, 0, value.Length);
-            _hmac.DoFinal(resBuf, 0);
-
-            return resBuf;
-		}
-    }
-
-    public class HmacSha512
-    {
-        private readonly HMac _hmac;
-
-		public HmacSha512(byte[] key)
-		{
-            _hmac = new HMac(new Sha512Digest());
-            _hmac.Init(new KeyParameter(key));
-		}
-
-		public byte[] ComputeHash(byte[] value)
-		{
-            if (value == null) throw new ArgumentNullException("value");
-
-            byte[] resBuf = new byte[_hmac.GetMacSize()];
-            _hmac.BlockUpdate(value, 0, value.Length);
-            _hmac.DoFinal(resBuf, 0);
-
-            return resBuf;
-		}
-    }
-
-    public class SignatureVerificationException : Exception
-    {
-        public SignatureVerificationException(string message)
-            : base(message)
-        {
         }
     }
 }

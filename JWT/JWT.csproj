@@ -37,16 +37,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DefaultJsonSerializer.cs" />
+    <Compile Include="Ensure.cs" />
+    <Compile Include="exceptions\CryptographicException.cs" />
+    <Compile Include="exceptions\SignatureVerificationException.cs" />
     <Compile Include="IJsonSerializer.cs" />
+    <Compile Include="jws\HmacSha512.cs" />
+    <Compile Include="jws\HmacSha384.cs" />
+    <Compile Include="jws\HmacSha256.cs" />
     <Compile Include="JWT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="crypto">
       <HintPath>..\packages\Portable.BouncyCastle.1.7.0.2\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10\crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

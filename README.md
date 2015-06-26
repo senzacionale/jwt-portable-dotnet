@@ -2,6 +2,11 @@
 
 This library is Portable copy of https://github.com/jwt-dotnet/jwt and supports generating and decoding [JSON Web Tokens](http://tools.ietf.org/html/draft-jones-json-web-token-10).
 
+Supported algorithms: HMAC signatures with HS256, HS384 and HS512.
+
+## Dependency
+Portable.BouncyCastle, Newtonsoft.Json
+
 ## Installation
 The easiest way to install is via NuGet. See [here](https://www.nuget.org/packages/Portable.JWT/). Else, you can download and compile it yourself.
 

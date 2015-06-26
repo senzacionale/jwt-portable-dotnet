@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using FluentAssertions;
+using JWT.exceptions;
 using Newtonsoft.Json;
 using NUnit.Framework;
 
