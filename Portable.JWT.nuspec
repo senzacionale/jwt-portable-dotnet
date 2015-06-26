@@ -2,7 +2,7 @@
 <package>
 	<metadata>
 		<id>Portable.JWT</id>
-		<version>1.0.2</version>
+		<version>1.0.3</version>
 		<authors>Mitja Bombac</authors>
 		<owners>Mitja Bombac</owners>
 		<language>en-US</language>
@@ -14,10 +14,6 @@
 		<summary>JSON Web Token (JWT) Portable Implementation for .NET 4.5+ (Public Domain)</summary>
 		<description>JWT (JSON Web Token) Portable Implementation for .NET 4.5+ (Public Domain).			
 		Supported algorithms: HMAC signatures with HS256, HS384 and HS512.</description>
-		<dependencies>
-			<dependency id="Portable.BouncyCastle" version="1.7.0.2" />
-			<dependency id="Newtonsoft.Json" version="7.0.1" />
-		</dependencies>
 		<copyright>Copyright senzacionale 2015</copyright>
 	</metadata>
 </package>
