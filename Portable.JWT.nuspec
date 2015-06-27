@@ -7,7 +7,7 @@
 		<owners>Mitja Bombac</owners>
 		<language>en-US</language>
 		<projectUrl>https://github.com/senzacionale/jwt-portable-dotnet</projectUrl>
-		<tags>jwt portable json</tags>
+		<tags>jwt portable json signing hs256 hs384 hs512 key password based encryption</tags>
 		<licenseUrl>https://raw.github.com/senzacionale/jwt-portable-dotnet/master/LICENSE</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<releaseNotes>RSA-OAEP-256 (using SHA-256 hash) added to match latest spec version.</releaseNotes>
