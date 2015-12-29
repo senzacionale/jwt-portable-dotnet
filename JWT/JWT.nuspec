@@ -1,21 +1,18 @@
 <?xml version="1.0"?>
 <package >
-  <metadata>
-    <id>Portable.JWT</id>
-    <version>1.0.4</version>
-    <authors>Mitja Bombac</authors>
-    <owners>Mitja Bombac</owners>
+	<metadata>
+		<id>Portable.JWT</id>
+		<version>1.0.5</version>
+		<authors>Mitja Bombac</authors>
+		<owners>Mitja Bombac</owners>
 	<language>en-US</language>
-    <licenseUrl>https://github.com/senzacionale/xamarin-jose-jwt/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/senzacionale/jwt-portable-dotnet</projectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>JWT (JSON Web Token) Portable Implementation for .NET 4.5+ (Public Domain).			
+		<licenseUrl>https://github.com/senzacionale/xamarin-jose-jwt/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/senzacionale/jwt-portable-dotnet</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>JWT (JSON Web Token) Portable Implementation for .NET 4.5+ (Public Domain).			
 		Supported algorithms: HMAC signatures with HS256, HS384 and HS512.</description>
-    <releaseNotes>RSA-OAEP-256 (using SHA-256 hash) added to match latest spec version.</releaseNotes>
-    <copyright>Copyright 2015</copyright>
-    <tags>jwt portable json signing hs256 hs384 hs512 key password based encryption</tags>
-    <dependencies>
-      <dependency id="SampleDependency" version="1.0" />
-    </dependencies>
-  </metadata>
+		<releaseNotes>RSA-OAEP-256 (using SHA-256 hash) added to match latest spec version.</releaseNotes>
+		<copyright>Copyright 2015</copyright>
+		<tags>jwt portable json signing hs256 hs384 hs512 key password based encryption</tags>
+	</metadata>
 </package>
